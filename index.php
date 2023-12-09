@@ -1,119 +1,3 @@
-session_start();
-    include "view/header.php";
-	include "model/pdo.php";
-	include "model/sanpham.php";
-	include "model/danhmuc.php";
-	include "model/taikhoan.php";
-	include "model/role.php";
-	include "model/kichthuoc.php";
-	include "model/hinhanh.php";
-	include "model/cart.php";
-	include "model/bill.php";
-	include "model/oder.php";
-	include "model/pttt&ptvc.php";
-	include "global.php";
-
-	if (!isset($_SESSION['mycart'])) $_SESSION['mycart'] = [];
-	
-	$dspttt= loadall_pttt();
-	$dsptvc= loadall_ptvc();
-	$dsrole= loadall_role();
-    $dsdm=loadall_danhmuc();
-    $dstop10=loadall_sanpham_top10();
-	$listsanpham_moinhat = loadall_sanpham_moinhat();
-
-    if(isset($_GET['act'])&&($_GET['act']!="")){
-        $act=$_GET['act'];
-        switch ($act) {
-			case 'sanpham':  
-                if(isset($_POST['kyw'])&&($_POST['kyw']!="")){
-                    $kyw=$_POST['kyw'];
-                }  else {
-                    $kyw="";
-                }
-                if(isset($_GET['iddm'])&&($_GET['iddm']>0)){
-                    $iddm=$_GET['iddm'];
-
-                } else {
-                    $iddm=0;
-                }
-                $dssp=loadall_sanpham($kyw,$iddm);
-                $tendm=load_ten_dm($iddm);
-                include "view/sanpham.php";
-                break;
-				case 'sanphamct':
-					if(isset($_GET['idsp']) && ($_GET['idsp'] > 0)) {
-						$id = $_GET['idsp'];
-						$onesp = loadone_sanpham($id);
-						extract($onesp);
-						$sp_cung_loai = load_sanpham_cungloai($id, $iddm);
-						include "view/sanphamct.php";
-					} else {
-						include "view/home.php";
-					}
-					break;
-				
-            case 'gioithieu':
-                include "view/gioithieu.php";
-                break;
-            case 'lienhe':
-                include "view/lienhe.php";
-                break;
-            case 'baiviet':
-                include "view/baiviet.php";
-                break;
-				case 'dangky':
-					if (isset($_POST['dangky'])) {
-						$idrole = $_POST['idrole'];
-						$user = $_POST['user'];
-						$pass = $_POST['pass'];
-						$email = $_POST['email'];
-						$add = $_POST['add'];
-						$tel = $_POST['tel'];
-				
-						// Xử lý upload ảnh
-						if ($_FILES['avatar']['name'] != "") {
-							$target_dir = "upload/"; // Thư mục để lưu trữ ảnh
-							$target_file = $target_dir . basename($_FILES["avatar"]["name"]);
-							// Di chuyển ảnh từ thư mục tạm lên thư mục lưu trữ
-							if (move_uploaded_file($_FILES["avatar"]["tmp_name"], $target_file)) {
-								// Lưu đường dẫn của ảnh vào biến $avatar_path
-								$avatar_path = $target_file;
-								// Sau đó, bạn có thể lưu đường dẫn $avatar_path vào cơ sở dữ liệu
-								insert_taikhoan($user, $pass, $email, $add, $tel, $avatar_path, $idrole);
-								$thongbao = "Đã đăng ký thành công. Thật tuyệt vời giờ bạn có thể đăng nhập";
-								header('location:index.php?act=dangnhap');
-							} else {
-$thongbao = "Không thể upload ảnh. Vui lòng thử lại!";
-							}
-						} else {
-							$thongbao = "Bạn chưa chọn ảnh đại diện";
-						}
-					}
-					$listrole = loadall_role();
-					include "view/dangky.php";
-					break;
-			case 'dangnhap':
-				if(isset($_POST['dangnhap'])&&($_POST['dangnhap'])){
-					$user=$_POST['user'];
-                    $pass=$_POST['pass'];
-                    $checkuser=checkuser($user,$pass);
-					if(is_array($checkuser)){
-						$_SESSION['user']=$checkuser;
-						header('location:index.php');
-					}else{
-						$thongbao="Đăng nhập thất bại. Vui lòng kiểm tra lại thông tin đăng nhập";
-					}
-				}
-				include "view/dangnhap.php";
-				break;
-https://drive.google.com/drive/folders/1vhQ9K6GX-Zs4zBq1Jp8zRv01qb...ive_link
-Huynguyen
-https://meet.google.com/xtu-cugo-tby?authuser=1
-gửi cho cả đức đi
-Nguyễn Hùng Vỹ
-https://meet.google.com/ygj-tsfn-ajc
-https://github.com/Hungvy24/DuAn1
 <?php 
     session_start();
     include "view/header.php";
@@ -203,7 +87,7 @@ https://github.com/Hungvy24/DuAn1
 								$avatar_path = $target_file;
 								// Sau đó, bạn có thể lưu đường dẫn $avatar_path vào cơ sở dữ liệu
 								insert_taikhoan($user, $pass, $email, $add, $tel, $avatar_path, $idrole);
-$thongbao = "Đã đăng ký thành công. Thật tuyệt vời giờ bạn có thể đăng nhập";
+                            $thongbao = "Đã đăng ký thành công. Thật tuyệt vời giờ bạn có thể đăng nhập";
 								header('location:index.php?act=dangnhap');
 							} else {
 								$thongbao = "Không thể upload ảnh. Vui lòng thử lại!";
@@ -284,8 +168,7 @@ $thongbao = "Đã đăng ký thành công. Thật tuyệt vời giờ bạn có 
 					$thongbao = "Mật khẩu mới đã được gửi đến email của bạn.";
 				}
 				include "view/quenmk.php";
-				break;			
-				
+				break;	
 		case 'addtocart':
 			if (!isset($_SESSION['user'])) {
 				$message = "CLICK ĐỂ ĐĂNG NHẬP MỚI THỰC HIỆN ĐƯỢC CHỨC NĂNG NÀY";
