@@ -1,4 +1,33 @@
+<style>
+		/* Định dạng cho bảng */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
 
+/* Định dạng cho các thẻ <th> */
+th {
+  background-color: #f2f2f2;
+  text-align: left;
+  padding: 8px;
+}
+
+/* Định dạng cho các hàng lẻ và chẵn */
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+/* Định dạng cho các ô dữ liệu */
+td {
+  padding: 8px;
+}
+
+</style>
 
 </head>
 <?php 
