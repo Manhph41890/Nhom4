@@ -87,7 +87,7 @@
 								$avatar_path = $target_file;
 								// Sau đó, bạn có thể lưu đường dẫn $avatar_path vào cơ sở dữ liệu
 								insert_taikhoan($user, $pass, $email, $add, $tel, $avatar_path, $idrole);
-                            $thongbao = "Đã đăng ký thành công. Thật tuyệt vời giờ bạn có thể đăng nhập";
+								$thongbao = "Đã đăng ký thành công. Thật tuyệt vời giờ bạn có thể đăng nhập";
 								header('location:index.php?act=dangnhap');
 							} else {
 								$thongbao = "Không thể upload ảnh. Vui lòng thử lại!";
@@ -168,13 +168,14 @@
 					$thongbao = "Mật khẩu mới đã được gửi đến email của bạn.";
 				}
 				include "view/quenmk.php";
-				break;	
+				break;			
+				
 		case 'addtocart':
 			if (!isset($_SESSION['user'])) {
 				$message = "CLICK ĐỂ ĐĂNG NHẬP MỚI THỰC HIỆN ĐƯỢC CHỨC NĂNG NÀY";
 				echo '<h1><a href="index.php"><div class="alert alert-warning">' . $message . '</div></a></h1> ';
 			} else {
-if (isset($_POST['addtocart']) && $_POST['addtocart']) {
+			if (isset($_POST['addtocart']) && $_POST['addtocart']) {
 				$id = $_POST['id'];
 				$name_sp = $_POST['name_sp'];
 				$img = $_POST['img'];
@@ -270,7 +271,7 @@ if (isset($_POST['addtocart']) && $_POST['addtocart']) {
 				break;
 			case 'user':
 				$listbill=loadall_bill($_SESSION['user']['id']);
-include "view/user.php";
+				include "view/user.php";
 				break;
 			case 'thanhtoan':
 				include "view/thanhtoan.php";
