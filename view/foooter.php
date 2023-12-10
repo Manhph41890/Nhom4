@@ -126,3 +126,4 @@ data-src="img/youtube_icon.svg" alt="" class="lazy"></a></li>
 include "view/avatar.php";
 ?>
 </html>
+<!-- nhom4 -->
