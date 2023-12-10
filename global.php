@@ -7,3 +7,6 @@
 <?php 
      $img_sptt="../upload/";
 ?>
+<?php 
+     $img_spkt="";
+?>
