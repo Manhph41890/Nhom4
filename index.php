@@ -12,8 +12,8 @@
 	include "model/bill.php";
 	include "model/oder.php";
 	include "model/viewcart.php";
-	include "model/pttt&ptvc.php";
-	// include "../Nhom4/model/pttt_ptvc.php";
+	// include "model/pttt&ptvc.php";
+	include "../Nhom4/model/pttt_ptvc.php";
 	include "global.php";
 
 	if (!isset($_SESSION['mycart'])) $_SESSION['mycart'] = [];
