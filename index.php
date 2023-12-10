@@ -12,7 +12,8 @@
 	include "model/bill.php";
 	include "model/oder.php";
 	include "model/viewcart.php";
-	include "model/pttt&ptvc.php";
+	// include "../model/pttt&ptvc.php";
+	include "../Nhom4/model/pttt_ptvc.php";
 	include "global.php";
 
 	if (!isset($_SESSION['mycart'])) $_SESSION['mycart'] = [];
@@ -65,11 +66,7 @@
                 include "view/baiviet.php";
                 break;
 				case 'dangky':
-					$thongbao1 =[];
-					$thongbao2 =[];
-					$thongbao3 =[];
-					$thongbao4 =[];
-					$thongbao5 =[];
+					$error =[];
 					if (isset($_POST['dangky'])) {
 						$user = $_POST['user'];
 						$pass = $_POST['pass'];
@@ -87,29 +84,29 @@
 								$avatar_path = $target_file;
 								// Sau đó, bạn có thể lưu đường dẫn $avatar_path vào cơ sở dữ liệu
 								insert_taikhoan($user, $pass, $email, $add, $tel, $avatar_path, $idrole);
-								$thongbao = "Đã đăng ký thành công. Thật tuyệt vời giờ bạn có thể đăng nhập";
+								$thongbao= "Đã đăng ký thành công. Thật tuyệt vời giờ bạn có thể đăng nhập";
 								header('location:index.php?act=dangnhap');
 							} else {
-								$thongbao = "Không thể upload ảnh. Vui lòng thử lại!";
+								$error['avatar'] = "Không thể upload ảnh. Vui lòng thử lại!";
 							}
 						} else {
-							$thongbao = "Bạn chưa chọn ảnh đại diện";
+							$error['avatar'] = "Bạn chưa chọn ảnh đại diện";
 						}
 					
-					if(empty($thongbao1)){
-						$thongbao1['user']="Vui lòng nhập tên đăng nhập";
+					if(empty($user)){
+						$error['user']="Vui lòng nhập tên đăng nhập";
 					}
-					if(empty($thongbao2)){
-						$thongbao2['pass']="Vui lòng nhập mật khẩu";
+					if(empty($pass)){
+						$error['pass']="Vui lòng nhập mật khẩu";
 					}
-					if(empty($thongbao3)){
-						$thongbao3['email']="Vui lòng nhập email";
+					if(empty($email)){
+						$error['email']="Vui lòng nhập email";
 					}
-					if(empty($thongbao4)){
-						$thongbao4['add']="Vui lòng nhập địa chỉ";
+					if(empty($add)){
+						$error['add']="Vui lòng nhập địa chỉ";
 					}
-					if(empty($thongbao5)){
-						$thongbao5['tel']="Vui lòng nhập điện thoại";
+					if(empty($tel)){
+						$error['tel']="Vui lòng nhập điện thoại";
 					}
 				}
 					

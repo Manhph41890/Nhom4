@@ -83,17 +83,18 @@
                     <div class="form_container">
                         <div class="form-group">
                             <label for="">Ảnh đại diện:</label>
-                            <input type="file" class="form-control-file"  name="avatar">
+                            <input type="file" class="form-control-file"  name="avatar"><br>
+                            <?php if(isset($error['avatar'])) echo "<span style='color:red;'>{$error['avatar']}</span>" ?>
                         </div>
 
                         <div class="form-group">
                             <input type="text" class="form-control" name="user" placeholder="Tài khoản*">
-                            <?php if(isset($thongbao1['user'])) echo "<span style='color:red;'>{$thongbao1['user']}</span>" ?>
+                            <?php if(isset($error['user'])) echo "<span style='color:red;'>{$error['user']}</span>" ?>
                         </div>
                         <div class="form-group">
                             <input type="password" class="form-control" name="pass" value=""
                                 placeholder="Password*">
-                                <?php if(isset($thongbao2['pass'])) echo "<span style='color:red;'>{$thongbao2['pass']}</span>" ?>
+                                <?php if(isset($error['pass'])) echo "<span style='color:red;'>{$error['pass']}</span>" ?>
                         </div>
                         
                         <hr>
@@ -101,20 +102,20 @@
                             <div class="row no-gutters">
                                 <div class="form-group">
                                     <input type="email" class="form-control" name="email" placeholder="Email*">
-                                    <?php if(isset($thongbao3['email'])) echo "<span style='color:red;'>{$thongbao3['email']}</span>" ?>
+                                    <?php if(isset($error['email'])) echo "<span style='color:red;'>{$error['email']}</span>" ?>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group">
                                         <input type="text" class="form-control" placeholder="Địa chỉ đầy đủ*"
                                             name="add">
-                                            <?php if(isset($thongbao4['add'])) echo "<span style='color:red;'>{$thongbao4['add']}</span>" ?>
+                                            <?php if(isset($error['add'])) echo "<span style='color:red;'>{$error['add']}</span>" ?>
                                     </div>
                                 </div>
                             </div>
                                 <div class="col-6 pl-1"><div class="form-group">
                                                 <input type="text" class="form-control" placeholder="Điện thoại *"
                                                     name="tel">
-                                                    <?php if(isset($thongbao5['tel'])) echo "<span style='color:red;'>{$thongbao5['tel']}</span>" ?>
+                                                    <?php if(isset($error['tel'])) echo "<span style='color:red;'>{$error['tel']}</span>" ?>
                                             </div>
                                         </div>
                                    
