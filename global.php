@@ -1,1 +1,12 @@
-
+<?php 
+     $img_path="upload/";
+?>
+<?php 
+     $img_spct="upload/";
+?>
+<?php 
+     $img_sptt="../upload/";
+?>
+<?php 
+     $img_spkt="";
+?>
