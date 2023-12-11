@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thống kê sản phẩm theo danh mụ c</title>
+    <title>Thống kê sản phẩm theo danh mục</title>
     
 </head>
 <body><section>
