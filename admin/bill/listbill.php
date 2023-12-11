@@ -118,5 +118,3 @@
   align-items: center; /* căn giữa theo chiều dọc */
 }
 </style>
-
-
