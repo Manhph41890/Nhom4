@@ -10,6 +10,7 @@
             $ttien = $cart[3] * $cart[4];
             $tong += $ttien;
             echo'<div class="step last">
+	    
             <div class="box_general summary">
                 <ul>
                     <img src="'.$hinh.'" class="product_image">
