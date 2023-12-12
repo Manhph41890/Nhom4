@@ -28,7 +28,6 @@ function viewcart(){
         $ttien = $cart[3] * $cart[4];
         $tong += $ttien;
         $xoasp_td = '<td><a href="index.php?act=delcart&idcart='.$i.'">Xóa</a></td>';
-
         echo '<tr>
                 <td>
                     <div class="thumb_cart">
