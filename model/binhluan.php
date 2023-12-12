@@ -1,5 +1,4 @@
 <?php 
-    
 function insert_binhluan($noi_dung,$iduser,$idpro,$ngay_bl){
     $sql="insert into binh_luan(noi_dung,iduser,idpro,ngay_bl) value('$noi_dung','$iduser','$idpro','$ngay_bl')";
     pdo_execute($sql);
