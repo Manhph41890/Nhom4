@@ -116,6 +116,7 @@
                 </tr>
             </thead>
             <tbody>
+                
             <?php
                 $statistics = loadall_thongke();
                 foreach ($statistics as $category) {
