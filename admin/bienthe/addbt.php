@@ -1,6 +1,5 @@
 
 
-
     <section><header>
         <h1>Thêm Size sản phẩm</h1>
     </header>
