@@ -3,7 +3,6 @@
 			extract($_SESSION['user']);
 			$avatar=$img_path.$avatar;
 	?>
-			
 	<style>
 		.anhtron {
         width: 40px;
