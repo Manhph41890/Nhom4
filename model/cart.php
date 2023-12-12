@@ -54,6 +54,7 @@ function viewcart(){
             </tr>';
     }
 
+    
     echo '</tbody>
         </table> <!-- /cart_actions -->
     </div>
