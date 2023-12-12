@@ -264,7 +264,7 @@
             <div class="main_title">
                 <h2>Sản phẩm liên quan</h2>
                 <span>Nội thất</span>
-                <p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
+                
             </div>
             <div class="owl-carousel owl-theme products_carousel">
                 <?php 
