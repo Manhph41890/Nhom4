@@ -76,6 +76,7 @@
 						</div>
 					</div>
 				</div>
+				
 				<!-- /row -->
 				<div class="row justify-content-center align-items-center ">
 					<div class="col-lg-5">
