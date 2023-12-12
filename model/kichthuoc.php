@@ -1,4 +1,5 @@
 <?php 
+
 function loadall_bienthe(){
     $sql="select * from bien_the order by id desc";
     $listbienthe=pdo_query($sql);
