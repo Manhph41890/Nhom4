@@ -4,6 +4,7 @@
         $listpttt=pdo_query($sql);
         return $listpttt;
     }
+
     function loadone_pttt($id) {
         $sql = "select * from pttt WHERE id = $id";
         $pttt = pdo_query_one($sql);
