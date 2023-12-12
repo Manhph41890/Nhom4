@@ -20,7 +20,6 @@ function loadall_danhmuc($kyw = "") {
     // biến được sử dụng để lưu trữ kết quả của truy vấn SQL
 }
 
-
 function loadone_danhmuc($id){
     $sql = "select * from danh_muc where id=".$id;
     $dm = pdo_query_one($sql);
