@@ -10,7 +10,6 @@
     <header>
         <h1>Thống kê sản phẩm theo danh mục</h1>
     </header>
-
     
         <div id="piechart" style="width: 800px; height: 600px;"></div>
     
