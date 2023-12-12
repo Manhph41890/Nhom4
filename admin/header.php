@@ -286,7 +286,6 @@ input[type="reset"]:hover {
 
         </div>
 
-
     </div>
     <script src="assets/libs/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap tether Core JavaScript -->
