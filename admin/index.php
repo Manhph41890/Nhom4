@@ -24,6 +24,7 @@
             }
             include "danhmuc/adddm.php";
             break;
+            
         case 'listdm':
             if(isset($_POST['listok']) && ($_POST['listok'])){
                 $kyw = $_POST['kyw'];
