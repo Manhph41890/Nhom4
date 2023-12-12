@@ -14,6 +14,7 @@ function load_ten_sanpham($idsp){
         return "";
     } 
 }
+
 function insert_anh($idsp,$ten_anh){
     $sql="insert into anh_sp(idsp,ten_anh) value('$idsp','$ten_anh')";
     pdo_execute($sql);
