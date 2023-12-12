@@ -15,6 +15,7 @@
 	include "model/pttt_ptvc.php";
 	include "global.php";
 
+
 	if (!isset($_SESSION['mycart'])) $_SESSION['mycart'] = [];
 	
 	$dspttt= loadall_pttt();
