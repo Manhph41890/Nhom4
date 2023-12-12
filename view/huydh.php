@@ -1,4 +1,4 @@
-    <style>
+<style>
 .confirmation {
     width: 400px;
     margin: 100px auto;

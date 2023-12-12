@@ -5,7 +5,7 @@
         <h1>Thêm sản phẩm mới</h1>
     </header>
         <form action="index.php?act=addsp" method="post" enctype="multipart/form-data">
-        <label for="se">Chọn danh mục</label>
+        <label for="se">Chọn danh mục</label>a
         <select name="iddm">
                 <option value="0" selected>Tất cả</option>
                 <?php foreach($listdanhmuc as $danhmuc): ?>
@@ -45,3 +45,4 @@
             ?>
         </form>
     </section>
+

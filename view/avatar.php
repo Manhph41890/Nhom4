@@ -1,4 +1,3 @@
-
 <?php 	include "global.php";
 		if(isset($_SESSION['user'])){
 			extract($_SESSION['user']);
