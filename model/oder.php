@@ -1,5 +1,4 @@
 <?php
-
 function tongdonhang(){
     $tong=0;
     foreach ($_SESSION['mycart'] as $i => $cart) {
