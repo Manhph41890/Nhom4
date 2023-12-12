@@ -5,7 +5,6 @@ table {
   border-collapse: collapse;
   margin-bottom: 20px;
 }
-
 /* Định dạng cho các thẻ <th> */
 th {
   background-color: #f2f2f2;
