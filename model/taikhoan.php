@@ -32,6 +32,7 @@ function delete_taikhoan($id) {
     $sql = "DELETE FROM khach_hang WHERE id = $id";
     pdo_execute($sql);
 }
+
 function load_ten_role($idrole){
     if($idrole>0){
         $sql="select * from role where id=".$idrole;
