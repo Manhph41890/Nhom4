@@ -11,7 +11,6 @@ th {
   text-align: left;
   padding: 8px;
 }
-
 /* Định dạng cho các hàng lẻ và chẵn */
 tr:nth-child(even) {
   background-color: #f9f9f9;
