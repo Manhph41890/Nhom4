@@ -18,6 +18,7 @@ function sendMailPass($email, $username, $pass)
         $mail->SMTPSecure = PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
 
+        
         //Recipients
         $mail->setFrom('duanmau@example.com', 'DuAnMau');
         $mail->addAddress($email, $username);
