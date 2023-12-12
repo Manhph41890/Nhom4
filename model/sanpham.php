@@ -4,7 +4,6 @@ function insert_sanpham($tensp,$giaspgoc,$giasp,$hinh,$ngaynhap,$mota,$iddm){
     pdo_execute($sql);
 }
 
-
 function delete_sanpham($id){
     $sql="delete from hang_hoa where id=".$id;
     pdo_execute($sql);
