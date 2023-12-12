@@ -59,7 +59,6 @@
             background-color: #f8f8f8; /* Màu nền */
             color: #333; /* Màu chữ */
 }
-
     </style>
 
 </head>
