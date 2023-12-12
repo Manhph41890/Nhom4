@@ -9,6 +9,7 @@
 	<meta name="author" content="Ansonika">
 	<title>Majestic | Nội thất cao cấp </title>
 
+	
 	<!-- Favicons-->
 	<link rel="shortcut icon" href="img/brands/z4871992908279_16a19fc978221fc75541dc94d278ae60-removebg-preview (1).png"
 		type="image/x-icon">
