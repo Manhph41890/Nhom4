@@ -14,6 +14,7 @@ function delete_binhluan($id) {
     $sql = "DELETE FROM binh_luan WHERE id = $id";
     pdo_execute($sql);
 }
+
 function getTenNguoiDung($iduser){
     $sql = "SELECT user FROM khach_hang WHERE id = '$iduser'";
     $result = pdo_query_one($sql);
