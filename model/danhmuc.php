@@ -25,6 +25,7 @@ function loadone_danhmuc($id){
     $dm = pdo_query_one($sql);
     return $dm;
 }
+
 function update_danhmuc($id,$tenloai){
     $sql = "update danh_muc set name_dm='".$tenloai."' where id=".$id;
     pdo_execute($sql);
